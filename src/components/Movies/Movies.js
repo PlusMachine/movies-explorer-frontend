@@ -8,10 +8,12 @@ export default function Movies({ burgerClick }) {
   return (
     <>
       <Header burgerClick={burgerClick} />
-      <section className='movies'>
-        <SearchForm />
-        <MoviesCardList />
-      </section>
+      <main>
+        <section className='movies'>
+          <SearchForm />
+          <MoviesCardList />
+        </section>
+      </main>
       <Footer />
     </>
   );

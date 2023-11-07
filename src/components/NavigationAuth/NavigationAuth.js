@@ -9,10 +9,10 @@ export default function NavigationAuth({ burgerClick }) {
         <Link className='header__menu-button' to="/movies" >Фильмы</Link>
         <Link className='header__menu-button' to="/saved-movies" >Сохранённые фильмы</Link>
       </nav>
-      <div className='header__auth'>
+      <nav className='header__auth'>
         <Link className='header__account-button' to='/profile' >Аккаунт</Link>
-        <button className='header__burger-button' onClick={burgerClick}></button>
-      </div>
+        <button type='button' className='header__burger-button' onClick={burgerClick}></button>
+      </nav>
     </>
   );
 }

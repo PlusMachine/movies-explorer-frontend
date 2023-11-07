@@ -7,15 +7,17 @@ import Portfolio from '../Portfolio/Portfolio';
 import Footer from './../Footer/Footer';
 import Header from './../Header/Header';
 
-export default function Main({ burgerClick }) {
+export default function Main({ burgerClick, isOpenBurger }) {
   return (
     <>
       <Header burgerClick={burgerClick} />
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+      <main>
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </main>
       <Footer />
     </>
   );

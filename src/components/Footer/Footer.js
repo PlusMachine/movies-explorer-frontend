@@ -9,10 +9,14 @@ export default function Header() {
         <p className='footer__copyright'>
           © 2023
         </p>
-        <div className='footer__links'>
-          <a className='footer__link' href="https://practicum.yandex.ru/" target='blank'>Яндекс.Практикум</a>
-          <a className='footer__link' href="https://github.com/PlusMachine" target='blank'>Github</a>
-        </div>
+        <ul className='footer__links'>
+          <li className='footer__list-item'>
+            <a className='footer__link' href="https://practicum.yandex.ru/" target='blank'>Яндекс.Практикум</a>
+          </li>
+          <li className='footer__list-item'>
+            <a className='footer__link' href="https://github.com/PlusMachine" target='blank'>Github</a>
+          </li>
+        </ul>
       </div>
     </footer>
   );

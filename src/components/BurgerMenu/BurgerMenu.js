@@ -7,7 +7,7 @@ export default function BurgerMenu({ isOpenBurger, closeClick }) {
       <section className={`burger-menu ${isOpenBurger ? 'burger-menu_type_active' : ''} `} onClick={() => { closeClick() }}>
         <div className='burger-menu__blur' />
         <div className='burger-menu__content' onClick={e => e.stopPropagation()}>
-          <button className='burger-menu__close-button' onClick={closeClick} />
+          <button type='button' className='burger-menu__close-button' onClick={closeClick} />
           <nav className='burger-menu__nav'>
             <ul className='burger-menu__links'>
               <li className='burger-menu__li'>
@@ -20,8 +20,8 @@ export default function BurgerMenu({ isOpenBurger, closeClick }) {
                 <Link to="/saved-movies" className='burger-menu__link'>Сохранённые фильмы</Link>
               </li>
             </ul>
-            <Link to="/profile">
-              <button className='burger-menu__account-button'>Аккаунт</button>
+            <Link to="/profile" className='burger-menu__account-button'>
+              Аккаунт
             </Link>
           </nav>
         </div>

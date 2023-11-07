@@ -14,17 +14,21 @@ export default function Register() {
           <fieldset className='register__fieldset'>
             <label className='register__form-label'>
               <span className='register__input-title'>Имя</span>
-              <input className='register__input register__input-name' />
+              <input className='register__input register__input-name' required
+                minLength="2"
+                maxLength="40" placeholder='Введите имя' />
             </label>
             <span className='register__input-error'></span>
             <label className='register__form-label'>
               <span className='register__input-title'>E-mail</span>
-              <input className='register__input register__input-email' />
+              <input className='register__input register__input-email' required placeholder='Введите E-mail' minLength="2"
+                maxLength="40" />
             </label>
             <span className='register__input-error'></span>
             <label className='register__form-label'>
               <span className='register__input-title'>Пароль</span>
-              <input className='register__input register__input-password' type='password' />
+              <input className='register__input register__input-password' type='password' minLength="2"
+                maxLength="40" required placeholder='Введите пароль' />
             </label>
             <span className='register__input-error'>Что-то пошло не так...</span>
             <button className='register__submit-button'>Зарегистрироваться</button>

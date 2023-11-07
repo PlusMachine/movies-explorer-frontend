@@ -15,12 +15,14 @@ export default function Login() {
             <span className='login__input-error'></span>
             <label className='login__form-label'>
               <span className='login__input-title'>E-mail</span>
-              <input className='login__input login__input-email' />
+              <input className='login__input login__input-email' required placeholder='Введите E-mail' minLength="2"
+                maxLength="40" />
             </label>
             <span className='login__input-error'></span>
             <label className='login__form-label'>
               <span className='login__input-title'>Пароль</span>
-              <input className='login__input login__input-password' type='password' />
+              <input className='login__input login__input-password' type='password' required placeholder='Введите пароль' minLength="2"
+                maxLength="40" />
             </label>
             <span className='login__input-error'>Что-то пошло не так...</span>
             <button className='login__submit-button'>Войти</button>

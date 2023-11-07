@@ -15,7 +15,7 @@
   font-weight: 500;
   line-height: 29px;
   text-align: center;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.0em;
 }
 
 .profile__form {
@@ -73,7 +73,11 @@
   font-weight: 400;
   line-height: 13px;
   background-color: transparent;
-  outline: none;
+  outline: 0;
+}
+
+.profile__input:focus {
+  outline: 1px solid #4286f4a0;
 }
 
 .profile__input-title {
@@ -90,7 +94,7 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.0em;
   color: #fff;
   cursor: pointer;
 }
@@ -108,7 +112,7 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.0em;
   color: #EE3465;
 }
 

@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/" element={<Main burgerClick={handleClickBurgerMenu} />} />
         <Route path="/movies" element={<Movies burgerClick={handleClickBurgerMenu} />} />
         <Route path="/saved-movies" element={<SavedMovies burgerClick={handleClickBurgerMenu} />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile burgerClick={handleClickBurgerMenu} />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<Register />} />
         <Route path="*" element={<NotFound />} />

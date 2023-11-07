@@ -20,6 +20,10 @@
   margin: 0 0 40px 0;
 }
 
+.register__logo-pic:hover {
+  opacity: 0.8;
+}
+
 .register__title {
   margin: 0 0 40px 0;
   padding: 0;
@@ -29,7 +33,7 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  letter-spacing: 0.045em;
+  letter-spacing: 0.0em;
   text-align: left;
 }
 
@@ -62,6 +66,9 @@
 
 .register__input:focus {
   outline: 0;
+  background-color: transparent;
+  border-radius: 0;
+  border-bottom: 1px #4285F4 solid;
 }
 
 .register__input-password {
@@ -78,7 +85,7 @@
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.0em;
   text-align: left;
 }
 
@@ -120,7 +127,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.0em;
   text-align: center;
 }
 
@@ -145,14 +152,14 @@
 
 .register__hint {
   margin: 0;
-  padding: 18px 0 0 0;
+  padding: 15px 0 0 0;
 
   color: #8b8b8b;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.0em;
   text-align: center;
 }
 
@@ -166,6 +173,7 @@
 @media screen and (max-width: 550px) {
   .register {
     padding: 56px 0 0 0;
+    width: 260px;
   }
 
   .register__logo {
@@ -185,12 +193,14 @@
   .register__submit-button {
     box-sizing: border-box;
     margin-top: 154px;
+    font-size: 12px;
+    line-height: 14.5px;
   }
 
   .register__hint {
     padding-top: 14px;
     font-size: 12px;
     line-height: 14.5px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.0em;
   }
 }

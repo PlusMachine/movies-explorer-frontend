@@ -7,6 +7,7 @@
 
 .about-project__title {
   font-family: 'Inter', Arial, sans-serif;
+  letter-spacing: -0.04em;
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -52,7 +53,7 @@
   font-weight: 400;
   line-height: 24px;
   color: #fff;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.04em;
 }
 
 .about-project__text {
@@ -62,7 +63,6 @@
   line-height: 20px;
   color: #fff;
   margin: 24px 0 0 0;
-  letter-spacing: 0.04em;
   text-align: left;
 }
 
@@ -162,7 +162,7 @@
     margin-top: 16px;
     font-size: 11px;
     line-height: 16px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.05em;
   }
 
   .about-project__title-container {

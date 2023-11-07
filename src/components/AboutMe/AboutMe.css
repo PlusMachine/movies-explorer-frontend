@@ -5,12 +5,12 @@
 
 .about-me__title-container {
   max-width: 1140px;
-  position: relative;
   margin-bottom: 50px;
 }
 
 .about-me__title {
   font-family: 'Inter', Arial, sans-serif;
+  letter-spacing: -0.04em;
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -37,7 +37,7 @@
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
 .about-me__function {
@@ -48,7 +48,6 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0.045em;
 }
 
 .about-me__text {
@@ -59,7 +58,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.0
 }
 
 .about-me__photo {
@@ -79,7 +78,7 @@
 .about-me__info {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 598px;
   margin: 0;
   padding: 0;
 }
@@ -90,14 +89,17 @@
 }
 
 .about-me__git {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   text-decoration: none;
   color: #fff;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
-  position: absolute;
-  bottom: 0;
+
+  flex: 1 1;
 }
 
 .about-me__git:hover {
@@ -113,7 +115,7 @@
   .about-me__name {
     font-size: 40px;
     line-height: 40px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
   }
 
   .about-me__function {
@@ -122,13 +124,13 @@
 
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0.045em;
+    letter-spacing: 0em;
   }
 
   .about-me__text {
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0.035em;
+    letter-spacing: 0em;
   }
 
   .about-me__photo {
@@ -172,7 +174,7 @@
   .about-me__name {
     font-size: 30px;
     line-height: 36px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
   }
 
   .about-me__block {
@@ -182,11 +184,17 @@
   .about-me__text {
     font-size: 11px;
     line-height: 16px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.05em;
+    margin-bottom: 40px;
   }
 
 
   .about-me__title-container {
     margin-bottom: 46px;
+  }
+
+  .about-me__function {
+    padding-top: 20px;
+    letter-spacing: -0.05em;
   }
 }
