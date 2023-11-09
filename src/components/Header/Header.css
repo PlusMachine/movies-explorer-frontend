@@ -2,10 +2,13 @@
   margin-bottom: 20px;
   min-height: 74px;
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 0 70px;
+}
+
+.header__logo-link {
+  margin-right: 62px;
 }
 
 .header__logo {
@@ -18,11 +21,7 @@
 }
 
 .header__menu {
-  margin: 0 auto;
-  position: absolute;
   text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   gap: 16px;

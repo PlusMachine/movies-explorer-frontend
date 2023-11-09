@@ -7,7 +7,7 @@ import NavigationAuth from '../NavigationAuth/NavigationAuth';
 export default function Header({ burgerClick }) {
   return (
     < header className="header" >
-      <Link to='/'>
+      <Link to='/' className='header__logo-link'>
         <img
           src={logo}
           alt="логотип"

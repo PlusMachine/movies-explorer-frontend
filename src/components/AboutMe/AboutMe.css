@@ -6,6 +6,7 @@
 .about-me__title-container {
   max-width: 1140px;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .about-me__title {
