@@ -1,0 +1,142 @@
+.header {
+  margin-bottom: 20px;
+  min-height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+
+.header__logo-link {
+  margin-right: 62px;
+}
+
+.header__logo {
+  max-height: 38px;
+  max-width: 38px;
+}
+
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__menu {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header__menu-button {
+  text-decoration: none;
+  color: #fff;
+  text-decoration: inherit;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.header__menu-button:hover {
+  opacity: 0.7;
+}
+
+.header__auth {
+  display: flex;
+  gap: 30px;
+  text-decoration: none;
+  align-items: baseline;
+}
+
+.header__auth-button {
+  color: #fff;
+  text-decoration: inherit;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+}
+
+.header__auth-button:hover {
+  opacity: 0.8;
+}
+
+.header__auth-active-button {
+  background: #3DDC84;
+  padding: 8px 20px;
+  color: #000;
+  border-radius: 3px;
+}
+
+.header__account-button {
+  color: #fff;
+  text-decoration: inherit;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.0em;
+  background: #313131;
+  padding: 8px 22px;
+  border-radius: 20px;
+}
+
+.header__account-button:hover {
+  opacity: 0.8;
+}
+
+.header__burger-button {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 42px;
+  height: 42px;
+  background-image: url('../../images/burger-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 930px) {
+  .header {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+
+  .header__account-button {
+    display: none;
+  }
+
+  .header__burger-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .header {
+    padding: 0 14px;
+    margin-bottom: 15px;
+  }
+
+  .header__auth {
+    gap: 16px;
+  }
+
+  .header__auth-button {
+    font-size: 10px;
+    letter-spacing: -0.04em;
+  }
+
+  .header__auth-active-button {
+    padding: 6px 11px;
+  }
+}

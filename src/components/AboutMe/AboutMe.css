@@ -1,0 +1,201 @@
+.about-me {
+  max-width: 100%;
+  margin: 0 70px 100px 70px;
+}
+
+.about-me__title-container {
+  max-width: 1140px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.about-me__title {
+  font-family: 'Inter', Arial, sans-serif;
+  letter-spacing: -0.04em;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 25px 0;
+}
+
+.about-me__title-container:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #fff;
+}
+
+.about-me__name {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+}
+
+.about-me__function {
+  margin: 0 0 24px 0;
+  padding: 18px 0 0 0;
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.about-me__text {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.0
+}
+
+.about-me__photo {
+  display: block;
+  max-width: 270px;
+}
+
+.about-me__block {
+  display: flex;
+  margin: 0;
+  padding: 16px 0 0 0;
+  justify-content: space-between;
+  position: relative;
+  gap: 49px;
+}
+
+.about-me__info {
+  display: flex;
+  flex-direction: column;
+  max-width: 598px;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me__photo {
+  display: block;
+  border-radius: 10px;
+}
+
+.about-me__git {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+
+  flex: 1 1;
+}
+
+.about-me__git:hover {
+  opacity: 0.7;
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    margin: 0 50px 88px 50px;
+  }
+
+  .about-me__name {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.04em;
+  }
+
+  .about-me__function {
+    padding: 16px 0 0 0;
+    margin: 0 0 20px 0;
+
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+
+  .about-me__text {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
+
+  .about-me__photo {
+    display: block;
+    max-width: 255px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about-me__block {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-me__photo {
+    align-self: center;
+    max-width: 300px;
+    order: -1;
+  }
+
+  .about-me__text {
+    margin-bottom: 42px;
+  }
+
+  .about-me__git {
+    position: static;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about-me {
+    margin: 0 14px 70px 14px;
+  }
+
+  .about-me__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .about-me__name {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.04em;
+  }
+
+  .about-me__block {
+    gap: 40px;
+  }
+
+  .about-me__text {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.05em;
+    margin-bottom: 40px;
+  }
+
+
+  .about-me__title-container {
+    margin-bottom: 46px;
+  }
+
+  .about-me__function {
+    padding-top: 20px;
+    letter-spacing: -0.05em;
+  }
+}
