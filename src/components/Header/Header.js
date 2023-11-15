@@ -1,10 +1,10 @@
 import './Header.css';
 import logo from '../../images/logo__COLOR_main-1-min.svg';
 import { Link } from 'react-router-dom';
-// import Navigation from '../Navigation/Navigation';
+import Navigation from '../Navigation/Navigation';
 import NavigationAuth from '../NavigationAuth/NavigationAuth';
 
-export default function Header({ burgerClick }) {
+export default function Header({ burgerClick, loggedIn }) {
   return (
     < header className="header" >
       <Link to='/' className='header__logo-link'>
@@ -13,8 +13,7 @@ export default function Header({ burgerClick }) {
           alt="логотип"
           className="header__logo" />
       </Link>
-      {/* <Navigation /> */}
-      <NavigationAuth burgerClick={burgerClick} />
+      {loggedIn ? <NavigationAuth burgerClick={burgerClick} /> : <Navigation burgerClick={burgerClick} />}
     </header>
   );
 }

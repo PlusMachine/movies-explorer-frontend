@@ -39,6 +39,20 @@
   opacity: 0.8;
 }
 
+.card-list__more-button_hidden {
+  display: none;
+}
+
+.card-list__search-error {
+  width: 100%;
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: center;
+}
 
 @media screen and (max-width: 1023px) {
   .card-list__list {

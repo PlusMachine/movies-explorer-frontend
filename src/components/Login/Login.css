@@ -39,6 +39,8 @@
 
 
 .login__fieldset {
+  position: relative;
+
   box-sizing: border-box;
   width: 100%;
   border: none;
@@ -69,13 +71,25 @@
 
 .login__input:focus {
   outline: 0;
-  background-color: transparent;
-  border-radius: 0;
   border-bottom: 1px #4285F4 solid;
 }
 
-.login__input-password {
-  color: #EE3465
+.login__input_type_wrong {
+  color: #EE3465;
+}
+
+.login__input_type_wrong:focus {
+  border-bottom: 1px #EE3465 solid;
+}
+
+.login__input:-webkit-autofill,
+.login__input:-webkit-autofill:hover,
+.login__input:-webkit-autofill:focus,
+.login__input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #2f2f2f;
 }
 
 .login__input-title {
@@ -93,6 +107,7 @@
 }
 
 .login__form-label {
+  position: relative;
   width: 100%;
   display: block;
 
@@ -105,13 +120,20 @@
 }
 
 .login__input-error {
+  position: absolute;
+  bottom: -16px;
   color: #EE3465;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 10px;
   font-weight: 400;
-  line-height: 12px;
+  line-height: 10px;
   letter-spacing: 0em;
   text-align: left;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .login__submit-button {
@@ -131,11 +153,16 @@
   line-height: 17px;
   letter-spacing: 0.05em;
   text-align: center;
+  cursor: pointer;
 }
 
 .login__submit-button:hover {
-  cursor: pointer;
   opacity: 0.8;
+}
+
+.login__submit-button_disabled {
+  background: #f8f8f8;
+  color: #c2c2c2;
 }
 
 .login__register-button {
@@ -162,6 +189,24 @@
   line-height: 17px;
   letter-spacing: 0.0em;
   text-align: center;
+}
+
+.login__auth-error {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 50px;
+  color: #EE3465;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 

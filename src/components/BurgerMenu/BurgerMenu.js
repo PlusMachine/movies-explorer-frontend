@@ -14,7 +14,7 @@ export default function BurgerMenu({ isOpenBurger, closeClick }) {
                 <Link to="/" className='burger-menu__link'>Главная</Link>
               </li>
               <li className='burger-menu__li'>
-                <Link to="/movies" className='burger-menu__link burger-menu__link_type_active'>Фильмы</Link>
+                <Link to="/movies" className='burger-menu__link'>Фильмы</Link>
               </li>
               <li className='burger-menu__li'>
                 <Link to="/saved-movies" className='burger-menu__link'>Сохранённые фильмы</Link>
