@@ -99,9 +99,7 @@
   margin: 0;
 }
 
-.burger-menu__link_type_active {
-  border-bottom: solid 2px #fff;
-}
+
 
 .burger-menu__account-button {
   text-decoration: none;
@@ -125,6 +123,11 @@
   cursor: pointer;
   opacity: 0.8;
 }
+
+.burger-menu__link.active {
+  border-bottom: solid 2px #fff;
+}
+
 
 @media screen and (max-width: 600px) {
   .burger-menu {

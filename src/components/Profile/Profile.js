@@ -46,7 +46,14 @@ export default function Profile({ burgerClick, loggedIn, onLogout, onEdit, setUs
               </label>
               <span className='profile__input-error'>{errors.username}</span>
               <span className='profile__input-error'>{errors.email}</span>
-              {isSaveButton ? (<button className={`profile__button-save ${isValid && editError === "" ? "" : 'profile__button-save_disabled'}`} disabled={!isValid || editError !== "" ? true : ''} type='submit'>Сохранить</button>
+              {isSaveButton ? (
+                <button
+                  className={`profile__button-save ${isValid && editError === "" ? "" : 'profile__button-save_disabled'} ${values.username === currentUser.name && values.email === currentUser.email ? 'profile__button-save_disabled' : ''}`}
+                  disabled={!isValid || editError !== "" || (values.username === currentUser.name && values.email === currentUser.email) ? true : ''}
+                  type='submit'
+                >
+                  Сохранить
+                </button>
               ) : null}
             </fieldset>
           </form>

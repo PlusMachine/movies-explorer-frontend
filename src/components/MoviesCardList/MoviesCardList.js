@@ -96,16 +96,12 @@ export default function MoviesCardList({ filteredMovies, onDelete, toggleMovie, 
                 </span>
                 <span className='card-list__search-error'></span>
               </>
-              : pathname === '/movies' ?
-                <>
-                  <span className='card-list__search-error'></span>
-                  <span className='card-list__search-error'>Чтобы увидеть список фильмов выполните поиск</span>
-                  <span className='card-list__search-error'></span>
-                </>
-                : <>
-                  <span className='card-list__search-error'></span>
-                  <span className='card-list__search-error'>Нет сохранённых фильмов</span>                  <span className='card-list__search-error'></span>
-                </>
+              :
+              <>
+                <span className='card-list__search-error'></span>
+                <span className='card-list__search-error'>Ничего не найдено</span>
+                <span className='card-list__search-error'></span>
+              </>
       }
     </ul>
     {pathname === '/movies' && <button type='button' className={`card-list__more-button ${count >= filteredMovies.length && 'card-list__more-button_hidden'}`} onClick={loadMore}>Ёще</button>}

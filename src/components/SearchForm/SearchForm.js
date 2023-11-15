@@ -2,11 +2,14 @@ import { useLocation } from 'react-router-dom';
 import FilterCheckbox from './../FilterCheckbox/FilterCheckbox';
 import './SearchForm.css';
 import useFormWithValidation from '../../utils/Validation';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import ErrorContext from '../../contexts/ErrorContext';
+
 
 export default function SearchForm({ searchMovies, setIsError, searchedMovie, savedMovie, isShort, setIsShort, filterMovies, allMovies, toggleShort }) {
   const { pathname } = useLocation();
   const { values, handleChange, resetForm } = useFormWithValidation();
+  const isError = useContext(ErrorContext)
 
 
   useEffect(() => {
@@ -43,6 +46,7 @@ export default function SearchForm({ searchMovies, setIsError, searchedMovie, sa
         </fieldset >
         <FilterCheckbox toggleShort={toggleShort} isShort={isShort} />
       </form>
+      <span className={`search-form__error ${isError && 'search-form__error_active'}`}>{'Нужно ввести ключевое слово'}</span>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import './App.css';
 
 import { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 
 import Main from './Main/Main';
 import Movies from './Movies/Movies';
@@ -58,7 +58,7 @@ export default function App() {
 
   useEffect(() => {
     getData();
-  }, [navigate, loggedIn])
+  }, [loggedIn])
 
   function handleRegister({ username, password, email }) {
     setIsSending(true);
@@ -191,12 +191,12 @@ export default function App() {
                   onLogout={handleLogout}
                   onEdit={handleEditProfile} />} />
               <Route path="/signin"
-                element={<Login
+                element={loggedIn ? <Navigate to='/movies' replace /> : <Login
                   onLogin={handleLogin}
                   authError={authError}
                   isSending={isSending} />} />
               <Route path="/signup"
-                element={<Register
+                element={loggedIn ? <Navigate to='/movies' replace /> : <Register
                   onRegister={handleRegister}
                   authError={authError}
                   isSending={isSending} />} />

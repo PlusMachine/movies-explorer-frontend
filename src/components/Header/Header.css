@@ -101,6 +101,19 @@
   cursor: pointer;
 }
 
+.header__menu-button_active {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.header__menu-button.active {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+
 @media screen and (max-width: 930px) {
   .header {
     padding: 0 30px;

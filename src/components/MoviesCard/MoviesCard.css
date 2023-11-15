@@ -37,6 +37,9 @@
   border: none;
   border-radius: 30px;
   background-color: #313131;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-out;
 }
 
 .movies-card__button:hover {
@@ -76,6 +79,9 @@
   background-image: url('../../images/delete-button.svg');
 
   cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-out;
 }
 
 .movies-card__button_type_delete:hover {
@@ -118,6 +124,18 @@
 }
 
 
+.movies-card:hover .movies-card__button {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s ease-out;
+}
+
+
+.movies-card:hover .movies-card__button_type_delete {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s ease-out;
+}
 
 @media screen and (max-width: 1023px) {
   .movies-card__info {
@@ -146,5 +164,16 @@
 
   .movies-card__image {
     height: 168px;
+  }
+
+  .movies-card__button {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .movies-card__button_type_delete {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s ease-out;
   }
 }

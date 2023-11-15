@@ -2,6 +2,7 @@ import logo from '../../images/logo__COLOR_main-1-min.svg';
 import { Link } from 'react-router-dom';
 import './Register.css';
 import useFormWithValidation from '../../utils/Validation';
+import { emailRegex } from '../../utils/Regex';
 
 export default function Register({ onRegister, authError, isSending }) {
   const { values, handleChange, errors, isValid } = useFormWithValidation();
@@ -32,7 +33,7 @@ export default function Register({ onRegister, authError, isSending }) {
             <label className='register__form-label'>
               <span className='register__input-title'>E-mail</span>
               <input className={`register__input ${errors.email ? 'register__input_type_wrong' : ''}`} required placeholder='Введите E-mail' minLength="2"
-                maxLength="40" onChange={handleChange} name='email' type='email' disabled={isSending}
+                maxLength="40" onChange={handleChange} name='email' type='email' disabled={isSending} pattern={emailRegex}
               />
               <span className='register__input-error'>{errors.email}</span>
             </label>

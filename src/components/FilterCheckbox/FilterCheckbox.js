@@ -1,6 +1,6 @@
 import './FilterCheckbox.css';
 
-export default function FilterCheckbox({ toggleShort }) {
+export default function FilterCheckbox({ toggleShort, isShort }) {
   return (
     <fieldset className="filter-checkbox">
       <label className='filter-checkbox__cover' htmlFor="filter-checkbox__button">
@@ -9,6 +9,7 @@ export default function FilterCheckbox({ toggleShort }) {
           className="filter-checkbox__default"
           id="filter-checkbox__button"
           onChange={() => toggleShort()}
+          checked={isShort}
         />
         <div className='filter-checkbox__slider circle'></div>
       </label>

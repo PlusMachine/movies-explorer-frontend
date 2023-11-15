@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Footer from './../Footer/Footer';
 import './SavedMovies.css';
 import { useCallback, useEffect, useState } from 'react';
+import { shortMovieDuration } from '../../utils/constants';
 
 export default function SavedMovies({ savedMovies, burgerClick, loggedIn, setIsError, onDelete }) {
   const [filteredMovies, setFilteredMovies] = useState(savedMovies)
@@ -19,7 +20,7 @@ export default function SavedMovies({ savedMovies, burgerClick, loggedIn, setIsE
     setSearchedMovie(searchedMovie)
     setFilteredMovies(movies.filter((item) => {
       const searchName = item.nameRU.toLowerCase().includes(searchedMovie.toLowerCase())
-      return isShort ? (searchName && item.duration <= 40) : searchName
+      return isShort ? (searchName && item.duration <= shortMovieDuration) : searchName
     }))
   }, [])
 

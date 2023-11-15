@@ -5,6 +5,7 @@ import Footer from './../Footer/Footer';
 import './Movies.css';
 import { useCallback, useEffect, useState } from 'react';
 import moviesApi from '../../utils/MoviesApi';
+import { shortMovieDuration } from '../../utils/constants';
 
 export default function Movies({ burgerClick, loggedIn, moviesError, setError, savedMovies, setIsError, toggleMovie }) {
   const [allMovies, setAllMovies] = useState([]);
@@ -22,7 +23,7 @@ export default function Movies({ burgerClick, loggedIn, moviesError, setError, s
     setSearchedMovie(inputValue);
     setFilteredMovies(movies.filter((item) => {
       const movieName = item.nameRU.toLowerCase().includes(inputValue.toLowerCase())
-      return isShort ? (movieName && item.duration <= 40) : movieName
+      return isShort ? (movieName && item.duration <= shortMovieDuration) : movieName
     }))
   }, [])
 

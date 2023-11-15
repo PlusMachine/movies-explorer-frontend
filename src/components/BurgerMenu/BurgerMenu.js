@@ -1,5 +1,5 @@
 import './BurgerMenu.css';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 export default function BurgerMenu({ isOpenBurger, closeClick }) {
   return (
@@ -11,13 +11,13 @@ export default function BurgerMenu({ isOpenBurger, closeClick }) {
           <nav className='burger-menu__nav'>
             <ul className='burger-menu__links'>
               <li className='burger-menu__li'>
-                <Link to="/" className='burger-menu__link'>Главная</Link>
+                <NavLink to="/" className='burger-menu__link'>Главная</NavLink>
               </li>
               <li className='burger-menu__li'>
-                <Link to="/movies" className='burger-menu__link'>Фильмы</Link>
+                <NavLink to="/movies" className='burger-menu__link'>Фильмы</NavLink>
               </li>
               <li className='burger-menu__li'>
-                <Link to="/saved-movies" className='burger-menu__link'>Сохранённые фильмы</Link>
+                <NavLink to="/saved-movies" className='burger-menu__link'>Сохранённые фильмы</NavLink>
               </li>
             </ul>
             <Link to="/profile" className='burger-menu__account-button'>
