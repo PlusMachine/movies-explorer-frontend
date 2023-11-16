@@ -11,7 +11,10 @@
 }
 
 .movies-card__image {
-  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  height: 201px;
   border-radius: 7px;
   margin: 0;
   padding: 0;
@@ -34,12 +37,57 @@
   border: none;
   border-radius: 30px;
   background-color: #313131;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-out;
 }
 
 .movies-card__button:hover {
   cursor: pointer;
   opacity: 0.8;
 }
+
+.movies-card__button_active {
+  height: 21px;
+  width: 21px;
+  top: 14px;
+  right: 13px;
+  position: absolute;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+
+  background-image: url(../../images/save-button-active.svg);
+}
+
+.movies-card__button_active:hover {
+  opacity: 0.8;
+}
+
+.movies-card__button_type_delete {
+  width: 21px;
+  height: 21px;
+  top: 14px;
+  right: 13px;
+  position: absolute;
+
+  border: none;
+
+
+  padding: 6px 7px;
+  background-color: transparent;
+  background-image: url('../../images/delete-button.svg');
+
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-out;
+}
+
+.movies-card__button_type_delete:hover {
+  opacity: 0.8;
+}
+
 
 .movies-card__info {
   margin: 0;
@@ -75,9 +123,27 @@
   border-radius: 3px;
 }
 
+
+.movies-card:hover .movies-card__button {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s ease-out;
+}
+
+
+.movies-card:hover .movies-card__button_type_delete {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s ease-out;
+}
+
 @media screen and (max-width: 1023px) {
   .movies-card__info {
     padding: 20px 0 0 0;
+  }
+
+  .movies-card__image {
+    height: 190px;
   }
 }
 
@@ -94,5 +160,20 @@
 
   .movies-card__duration {
     letter-spacing: -0.02em;
+  }
+
+  .movies-card__image {
+    height: 168px;
+  }
+
+  .movies-card__button {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .movies-card__button_type_delete {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s ease-out;
   }
 }

@@ -7,10 +7,10 @@ import Portfolio from '../Portfolio/Portfolio';
 import Footer from './../Footer/Footer';
 import Header from './../Header/Header';
 
-export default function Main({ burgerClick, isOpenBurger }) {
+export default function Main({ burgerClick, loggedIn }) {
   return (
     <>
-      <Header burgerClick={burgerClick} />
+      <Header loggedIn={loggedIn} burgerClick={burgerClick} />
       <main>
         <Promo />
         <AboutProject />
